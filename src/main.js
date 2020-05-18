@@ -16,17 +16,15 @@ window.addEventListener(
     console.log("get event: " + event);
     if (event.data.room) {
       console.log("room: " + event.data.room);
-      this.$store.commit("setRoom", event.data.room);
-    } else if (event.data.users) {
+      store.commit("setRoom", event.data.room);
+    } 
+    if (event.data.accessUserId) {
+      console.log(event.data.accessUserId)
+      store.commit("setAccessUserId", event.data.accessUserId);
+    } 
+    if (event.data.users) {
       console.log("user: " + event.data.users);
-      this.$store.commit("setUsers", event.data.users);
-      this.$store.dispatch("setUserId", this.$route.query.userId);
-      if (this.$route.query.displayUserId) {
-        this.$store.dispatch(
-          "setDisplayUserId",
-          this.$route.query.displayUserId
-        );
-      }
+      store.commit("setUsers", event.data.users);
     }
   },
   false

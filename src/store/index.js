@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state: {
     room: {}, // room information
     users: [], // information of users in the room
-    user: {}, // information of user who play in this window
+    accessUserId: null, // information of user who play in this window
     appState: {}
   },
   mutations: {
@@ -19,15 +19,18 @@ export default new Vuex.Store({
       console.log(users);
       state.users = users;
     },
-    setUser(state, userId) {
-      const user = state.users.find(user => user.id === userId);
-      state.user = user;
+    setAccessUserId(state, userId) {
+      state.accessUserId = userId;
     }
   },
   actions: {
     // put original actions here
   },
   getters: {
+    accessUser: (state) => {
+      return state.users.find(user => user.id === state.accessUserId);
+    }
+
     // put original getters here
   },
   modules: {}
