@@ -1,7 +1,5 @@
 <template>
-  <div>
-    Player：aaa
-  </div>
+  <div>Player： {{ displayUser.name }}</div>
 </template>
 <script>
 export default {
