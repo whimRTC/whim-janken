@@ -1,9 +1,7 @@
 # wh.im app template
 
 ## 概要
-```
-yarn install
-```
+wh.im上でアプリを動かすときのVue.jsによるテンプレートです。
 
 ### 使い方
 クローンし、remoteを変更します
