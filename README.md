@@ -1,24 +1,14 @@
-# template
+# wh.im app template
 
-## Project setup
+## 概要
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### 使い方
+クローンし、remoteを変更します
+``` 
+git clone git@github.com:sally-inc/whim-template.git {app_name}
+cd {app_name}
+git remote set-url origin {your_url}
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
