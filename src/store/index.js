@@ -3,6 +3,11 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
+// 情報の登録
+const setAppState = appState => {
+  window.parent.postMessage({ appState }, document.referrer);
+};
+
 export default new Vuex.Store({
   state: {
     room: {}, // room information
@@ -24,6 +29,16 @@ export default new Vuex.Store({
     }
   },
   actions: {
+    updateAppState({ state }, obj) {
+      let appState = state.room.appState || {};
+      Object.keys(obj).forEach(key => {
+        appState[key] = obj[key];
+      });
+      setAppState(appState);
+    },
+    resetAppState() {
+      setAppState({});
+    }
     // put original actions here
   },
   getters: {
