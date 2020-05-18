@@ -1,10 +1,60 @@
 <template>
-  <div>Player： {{ displayUser.name }}</div>
+  <div class="container">
+    <Result v-if="isAllSelected" :displayUser="displayUser" />
+
+    <h2 v-else-if="isSelected" class="subtitle">
+      選択済み
+    </h2>
+    <Me v-else-if="isMe" />
+    <h2 v-else class="subtitle">
+      選択中
+    </h2>
+  </div>
 </template>
 <script>
 export default {
   name: "Player",
-  props: ["displayUser"] // 表示されているUserの情報
+  components: {
+    Me: () => import("@/components/player/Me"),
+    Result: () => import("@/components/player/Result")
+  },
+  props: ["displayUser"], // 表示されているUserの情報
+  computed: {
+    users() {
+      return this.$store.state.users;
+    },
+    isMe() {
+      return this.$store.state.accessUserId === this.displayUser.id;
+    },
+    isSelected() {
+      return !!this.appState[this.displayUser.id];
+    },
+    appState() {
+      return this.$store.state.appState;
+    },
+    isAllSelected() {
+      return (
+        this.users.length > 0 &&
+        this.users.every(user => this.appState[user.id])
+      );
+    }
+  }
 };
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.container {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.subtitle {
+  font-weight: 300;
+  font-size: 42px;
+  color: #526488;
+  word-spacing: 5px;
+  padding-bottom: 15px;
+}
+</style>
