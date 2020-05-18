@@ -27,10 +27,9 @@ export default new Vuex.Store({
     // put original actions here
   },
   getters: {
-    accessUser: (state) => {
+    accessUser: state => {
       return state.users.find(user => user.id === state.accessUserId);
     }
-
     // put original getters here
   },
   modules: {}

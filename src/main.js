@@ -13,15 +13,14 @@ window.parent.postMessage("connect", document.referrer);
 window.addEventListener(
   "message",
   event => {
-    console.log("get event: " + event);
     if (event.data.room) {
       console.log("room: " + event.data.room);
       store.commit("setRoom", event.data.room);
-    } 
+    }
     if (event.data.accessUserId) {
-      console.log(event.data.accessUserId)
+      console.log("accessUserId: " + event.data.accessUserId);
       store.commit("setAccessUserId", event.data.accessUserId);
-    } 
+    }
     if (event.data.users) {
       console.log("user: " + event.data.users);
       store.commit("setUsers", event.data.users);

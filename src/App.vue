@@ -1,29 +1,65 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    {{ this.$store.state }}
+    <Main class="main" />
+
+    <Player
+      v-for="user in $store.state.users"
+      :key="user.id"
+      class="box"
+      :class="`pos${user.positionNumber}`"
+      :displayUser="user"
+    />
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Main: () => import("@/components/main/Index"),
+    Player: () => import("@/components/player/Index")
   }
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="scss" scoped>
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30%;
+  height: 30%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  background: rgba(256, 256, 256, 0.7);
+  z-index: 1;
+  border-radius: 10px;
+}
+
+.box {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  text-align: center;
+
+  &.pos1 {
+    top: 0%;
+    left: 0%;
+  }
+
+  &.pos2 {
+    top: 0%;
+    left: 50%;
+  }
+
+  &.pos3 {
+    top: 50%;
+    left: 0%;
+  }
+
+  &.pos4 {
+    top: 50%;
+    left: 50%;
+  }
 }
 </style>
