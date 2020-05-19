@@ -4,7 +4,7 @@ import Vuex from "vuex";
 Vue.use(Vuex);
 
 // 情報の登録
-const setAppState = appState => {
+const postAppState = appState => {
   window.parent.postMessage({ appState }, document.referrer);
 };
 
@@ -18,14 +18,16 @@ export default new Vuex.Store({
   mutations: {
     setRoom(state, room) {
       state.room = room;
-      state.appState = room.appState || {};
     },
     setUsers(state, users) {
-      console.log(users);
       state.users = users;
     },
     setAccessUserId(state, userId) {
       state.accessUserId = userId;
+    },
+    setAppState(state, appState) {
+      console.log(appState);
+      state.appState = appState;
     }
   },
   actions: {
@@ -34,10 +36,10 @@ export default new Vuex.Store({
       Object.keys(obj).forEach(key => {
         appState[key] = obj[key];
       });
-      setAppState(appState);
+      postAppState(appState);
     },
     resetAppState() {
-      setAppState({});
+      postAppState({});
     }
     // put original actions here
   },

@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <Result v-if="isAllSelected" :displayUser="displayUser" />
-
     <h2 v-else-if="isSelected" class="subtitle">
       選択済み
     </h2>
@@ -27,6 +26,7 @@ export default {
       return this.$store.state.accessUserId === this.displayUser.id;
     },
     isSelected() {
+      console.log(this.appState);
       return !!this.appState[this.displayUser.id];
     },
     appState() {
