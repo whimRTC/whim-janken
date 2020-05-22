@@ -2,7 +2,6 @@
   <div>
     <h2 class="subtitle">
       選択してください！
-      {{ this.$whim.users }}
     </h2>
     <div>
       <img
