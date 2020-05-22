@@ -8203,6 +8203,15 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
+whim-client-vue@^1.0.0:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/whim-client-vue/-/whim-client-vue-0.3.1.tgz#4bb06433444a25aa23feb5f2581a52b20603bc86"
+  integrity sha512-zBFllcYTNnlKq42ieL1evFC1D8y4Zvj72/5dGZBR2EaBTvOQlLtxuTGxzP3cJfdXSK9HP3PKv94c+pLfA2y0lw==
+  dependencies:
+    core-js "^3.6.4"
+    vue "^2.6.11"
+    vuex "^3.1.3"
+
 word-wrap@~1.2.3:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/word-wrap/-/word-wrap-1.2.3.tgz#610636f6b1f703891bd34771ccb17fb93b47079c"

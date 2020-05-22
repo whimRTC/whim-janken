@@ -1,7 +1,8 @@
 <template>
   <div>
     <h2 class="subtitle">
-      選択してください
+      選択してください！
+      {{ this.$whim.users }}
     </h2>
     <div>
       <img
@@ -30,8 +31,8 @@ export default {
   name: "me",
   methods: {
     select(show) {
-      this.$store.dispatch("appState", {
-        [this.$store.state.accessUserId]: show
+      this.$whim.assignState({
+        [this.$whim.accessUser.id]: show
       });
     }
   }

@@ -10,21 +10,18 @@
 export default {
   computed: {
     users() {
-      return this.$store.state.users;
-    },
-    appState() {
-      return this.$store.state.appState;
+      return this.$whim.users;
     },
     isAllSelected() {
       return (
         this.users.length > 0 &&
-        this.users.every(user => this.appState[user.id])
+        this.users.every(user => this.$whim.state[user.id])
       );
     }
   },
   methods: {
     reset() {
-      this.$store.dispatch("resetAppState");
+      this.$whim.deleteState();
     }
   }
 };

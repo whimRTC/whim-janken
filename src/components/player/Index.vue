@@ -20,22 +20,19 @@ export default {
   props: ["displayUser"], // 表示されているUserの情報
   computed: {
     users() {
-      return this.$store.state.users;
+      return this.$whim.users;
     },
     isMe() {
-      return this.$store.state.accessUserId === this.displayUser.id;
+      return this.$whim.accessUser.id === this.displayUser.id;
     },
     isSelected() {
-      console.log(this.appState);
-      return !!this.appState[this.displayUser.id];
-    },
-    appState() {
-      return this.$store.state.appState;
+      console.log(this.$whim.state);
+      return !!this.$whim.state[this.displayUser.id];
     },
     isAllSelected() {
       return (
         this.users.length > 0 &&
-        this.users.every(user => this.appState[user.id])
+        this.users.every(user => this.$whim.state[user.id])
       );
     }
   }

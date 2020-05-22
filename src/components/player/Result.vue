@@ -31,7 +31,7 @@ export default {
   props: ["displayUser"],
   computed: {
     show: function() {
-      return this.$store.state.appState[this.displayUser.id];
+      return this.$whim.state[this.displayUser.id];
     }
   }
 };
