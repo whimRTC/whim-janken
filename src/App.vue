@@ -3,7 +3,7 @@
     <Main class="main" />
 
     <Player
-      v-for="user in $store.state.users"
+      v-for="user in $whim.users"
       :key="user.id"
       class="box"
       :class="`pos${user.positionNumber}`"
