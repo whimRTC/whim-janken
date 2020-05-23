@@ -17,7 +17,12 @@ export default {
     Me: () => import("@/components/player/Me"),
     Result: () => import("@/components/player/Result")
   },
-  props: ["displayUser"], // 表示されているUserの情報
+  props: {
+    displayUser: {
+      type: String,
+      required: true
+    }
+  }, // 表示されているUserの情報
   computed: {
     users() {
       return this.$whim.users;

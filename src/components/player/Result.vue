@@ -28,7 +28,12 @@
 <script>
 export default {
   name: "result",
-  props: ["displayUser"],
+  props: {
+    displayUser: {
+      type: Object,
+      required: true
+    }
+  },
   computed: {
     show: function() {
       return this.$whim.state[this.displayUser.id];
