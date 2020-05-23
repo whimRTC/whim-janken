@@ -11,10 +11,10 @@
         @click="select('rock')"
       />
       <img
-        src="@/assets/scissor.png"
+        src="@/assets/scissors.png"
         width="150"
         height="150"
-        @click="select('scissor')"
+        @click="select('scissors')"
       />
       <img
         src="@/assets/paper.png"

@@ -11,8 +11,8 @@
         height="150"
       />
       <img
-        v-if="show === 'scissor'"
-        src="@/assets/scissor.png"
+        v-if="show === 'scissors'"
+        src="@/assets/scissors.png"
         width="150"
         height="150"
       />
