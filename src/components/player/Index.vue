@@ -26,7 +26,6 @@ export default {
       return this.$whim.accessUser.id === this.displayUser.id;
     },
     isSelected() {
-      console.log(this.$whim.state);
       return !!this.$whim.state[this.displayUser.id];
     },
     isAllSelected() {
