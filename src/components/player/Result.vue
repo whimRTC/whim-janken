@@ -5,19 +5,19 @@
     </h2>
     <div>
       <img
-        v-if="show == 'rock'"
+        v-if="show === 'rock'"
         src="@/assets/rock.png"
         width="150"
         height="150"
       />
       <img
-        v-if="show == 'scissor'"
+        v-if="show === 'scissor'"
         src="@/assets/scissor.png"
         width="150"
         height="150"
       />
       <img
-        v-if="show == 'paper'"
+        v-if="show === 'paper'"
         src="@/assets/paper.png"
         width="150"
         height="150"
