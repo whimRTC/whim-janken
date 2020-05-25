@@ -27,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: "me",
+  name: "Me",
   methods: {
     select(show) {
       this.$whim.assignState({

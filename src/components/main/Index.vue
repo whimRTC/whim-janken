@@ -8,6 +8,7 @@
 
 <script>
 export default {
+  name: "Main",
   computed: {
     users() {
       return this.$whim.users;

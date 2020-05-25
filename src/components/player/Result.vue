@@ -27,7 +27,7 @@
 </template>
 <script>
 export default {
-  name: "result",
+  name: "Result",
   props: {
     displayUser: {
       type: Object,
