@@ -19,7 +19,7 @@ export default {
   },
   props: {
     displayUser: {
-      type: String,
+      type: Object,
       required: true
     }
   }, // 表示されているUserの情報
