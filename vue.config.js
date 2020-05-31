@@ -1,6 +1,8 @@
 module.exports = {
   devServer: {
-    host: process.env.HOST || "localhost",
-    port: 3001
+    host: process.env.HOST || "localhost"
+  },
+  configureWebpack: {
+    resolve: { symlinks: false }
   }
 };

@@ -4,24 +4,13 @@
       選択してください！
     </h2>
     <div>
-      <img
-        src="@/assets/rock.png"
-        width="150"
-        height="150"
-        @click="select('rock')"
-      />
+      <img src="@/assets/rock.png" class="img" @click="select('rock')" />
       <img
         src="@/assets/scissors.png"
-        width="150"
-        height="150"
+        class="img"
         @click="select('scissors')"
       />
-      <img
-        src="@/assets/paper.png"
-        width="150"
-        height="150"
-        @click="select('paper')"
-      />
+      <img src="@/assets/paper.png" class="img" @click="select('paper')" />
     </div>
   </div>
 </template>
@@ -37,4 +26,10 @@ export default {
   }
 };
 </script>
-<style></style>
+<style lang="scss" scoped>
+.img {
+  width: 150px;
+
+  max-width: 30vw;
+}
+</style>

@@ -2,13 +2,15 @@ import Vue from "vue";
 import App from "./App.vue";
 import Vuex from "vuex";
 import whimClientVue from "whim-client-vue";
+import "whim-client-vue/dist/whim-client-vue.css";
+
+console.log("b");
 
 Vue.use(Vuex);
-
-const store = new Vuex.Store();
+const store = new Vuex.Store({});
 
 Vue.config.productionTip = false;
-Vue.use(whimClientVue, { store });
+Vue.use(whimClientVue, { store, environment: "staging" });
 
 new Vue({
   store,

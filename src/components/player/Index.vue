@@ -1,11 +1,10 @@
 <template>
   <div class="container">
     <Result v-if="isAllSelected" :displayUser="displayUser" />
-    <h2 v-else-if="isSelected" class="subtitle">
+    <h2 v-else-if="isAccessUserSelected && isSelected" class="subtitle">
       選択済み
     </h2>
-    <Me v-else-if="isMe" />
-    <h2 v-else class="subtitle">
+    <h2 v-else-if="isAccessUserSelected" class="subtitle">
       選択中
     </h2>
   </div>
@@ -14,12 +13,11 @@
 export default {
   name: "Player",
   components: {
-    Me: () => import("@/components/player/Me"),
     Result: () => import("@/components/player/Result")
   },
   props: {
     displayUser: {
-      type: String,
+      type: Object,
       required: true
     }
   }, // 表示されているUserの情報
@@ -29,6 +27,9 @@ export default {
     },
     isMe() {
       return this.$whim.accessUser.id === this.displayUser.id;
+    },
+    isAccessUserSelected() {
+      return !!this.$whim.state[this.$whim.accessUser.id];
     },
     isSelected() {
       return !!this.$whim.state[this.displayUser.id];

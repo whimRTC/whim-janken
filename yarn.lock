@@ -7971,6 +7971,11 @@ vue-loader@^15.9.1:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
+vue-plugin-load-script@^1.2.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/vue-plugin-load-script/-/vue-plugin-load-script-1.2.0.tgz#d8cfb0ed68a78f67e24c6254d864f0c77aa80108"
+  integrity sha512-QbWjZSFRToSP6S0nZFsH618PsTlZgSg8m8Xv602vezznLTHYd0wAXEw0jlYND7L6BMe0KcA7cvUwLROyfBlQ4w==
+
 vue-style-loader@^4.1.0, vue-style-loader@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/vue-style-loader/-/vue-style-loader-4.1.2.tgz#dedf349806f25ceb4e64f3ad7c0a44fba735fcf8"
@@ -8203,10 +8208,10 @@ which@^2.0.1:
   dependencies:
     isexe "^2.0.0"
 
-whim-client-vue@^1.0.5:
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/whim-client-vue/-/whim-client-vue-1.0.5.tgz#9cea0668e0543646571ee61de0c185af5a5b4fe4"
-  integrity sha512-9bbsHr3F+y7o3Hx/eQ9Jgqs2h/7Yx39BvDxprwXraZflrcysKwGkNMY7zhE5uljVnW/TTJ9VYNO2YezIDw1QnA==
+whim-client-vue@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/whim-client-vue/-/whim-client-vue-1.0.7.tgz#5b430a285fd4182374e57d25df72aee8f6c320f0"
+  integrity sha512-k1mYITFZVOOYoO0yr9FHyXgdyUoGXDqLulKqNOlFeVTkT36j8dCZXn6skvCG2JkMureMWY4AGNGPKp2IHMMV1Q==
   dependencies:
     core-js "^3.6.4"
     vue "^2.6.11"
