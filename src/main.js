@@ -9,7 +9,7 @@ const store = new Vuex.Store({});
 
 Vue.config.productionTip = false;
 // TODO environment
-Vue.use(whimClientVue, { store, environment: "staging" });
+Vue.use(whimClientVue, { store });
 
 new Vue({
   store,
