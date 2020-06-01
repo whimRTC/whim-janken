@@ -4,12 +4,11 @@ import Vuex from "vuex";
 import whimClientVue from "whim-client-vue";
 import "whim-client-vue/dist/whim-client-vue.css";
 
-console.log("b");
-
 Vue.use(Vuex);
 const store = new Vuex.Store({});
 
 Vue.config.productionTip = false;
+// TODO environment
 Vue.use(whimClientVue, { store, environment: "staging" });
 
 new Vue({

@@ -17,6 +17,7 @@ export default {
     Main: () => import("@/components/main/Index"),
     Player: () => import("@/components/player/Index")
   },
+  // settings for debug
   // mounted() {
   //   let recaptchaScript = document.createElement("script");
   //   recaptchaScript.setAttribute("src", "http://localhost:8098");
