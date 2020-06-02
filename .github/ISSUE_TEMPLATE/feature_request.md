@@ -2,7 +2,7 @@
 name: Feature request
 about: 機能追加の要望
 title: "[FEATURE] "
-labels: enhancement, Backlog
+labels: feature, Backlog
 assignees: ''
 
 ---
