@@ -8,7 +8,7 @@ Vue.config.productionTip = false;
 // 通常はこれだけでよい
 // Vue.use(whimClientVue);
 
-// wh.imの開発
+// wh.imの開発時に用いるの設定
 let targetOrigin;
 if (window.location.search === "?env=dev") {
   targetOrigin = "https://localhost:3000";

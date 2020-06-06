@@ -27,7 +27,7 @@ export default {
   },
   methods: {
     reset() {
-      this.$whim.deleteState();
+      this.$whim.resetState();
     }
   }
 };

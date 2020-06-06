@@ -19,9 +19,7 @@ export default {
   name: "Me",
   methods: {
     select(show) {
-      this.$whim.assignState({
-        [this.$whim.accessUser.id]: show
-      });
+      this.$whim.setState(this.$whim.accessUser.id, show);
     }
   }
 };
