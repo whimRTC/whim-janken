@@ -11,7 +11,7 @@ Vue.config.productionTip = false;
 // wh.imの開発時に用いるの設定
 let targetOrigin;
 if ((new URL(window.location)).searchParams.get("env") === "dev") {
-  targetOrigin = "https://localhost:3000";
+  targetOrigin = "http://localhost:3000";
 } else if ((new URL(window.location)).searchParams.get("env") === "stg") {
   targetOrigin = "https://stg.wh.im";
 } else {
